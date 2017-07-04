@@ -1,5 +1,5 @@
-# ChatBomb
-A steam chat bomb written in C# that utilizes Steamworks.NET to allow you to send tons of messages through the steam interface to a friend.
+# Steam Minge
+The Steam Minge is a trolling application that utilizes the Steamworks.NET framework to mass send messages, mass send invites, and other annoying things!
 
 
 # Usage

@@ -8,21 +8,20 @@ using System.IO;
 
 namespace SteamMinge
 {
-    public partial class frmFriends : Form
+    public partial class frmSteamFriends : Form
     {
-        private TextBox _SteamID64TextBox;
         private SortedDictionary<string, CSteamID> _FriendsList;
 
-        public frmFriends(TextBox SteamID64TextBox, SortedDictionary<string, CSteamID> FriendsList)
+        public frmSteamFriends(SortedDictionary<string, CSteamID> FriendsList)
         {
             // Assign globals
-            _SteamID64TextBox = SteamID64TextBox;
             _FriendsList = FriendsList;
 
             // Initialize the components
             InitializeComponent();
         }
 
+        #region Control Methods
         private void frmFriends_Load(object sender, EventArgs e)
         {
             // Loop through all of the friends and add them to the data grid
@@ -41,11 +40,32 @@ namespace SteamMinge
 
         private void gridFriends_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Determine the text box to populate
+            TextBox SteamID64Text = DetermineSteamIDBox();
+
             // Blank the text box out
-            _SteamID64TextBox.Text = "";
+            SteamID64Text.Text = "";
 
             // Get the value in the third column (2, zero based) cause it should be our steam id and assign to text box 
-            _SteamID64TextBox.Text = gridFriends[2, e.RowIndex].Value.ToString();
+            SteamID64Text.Text = gridFriends[2, e.RowIndex].Value.ToString();
+
+            // Close the form
+            this.Close();
         }
+        #endregion
+
+        #region Helper Methods
+        private TextBox DetermineSteamIDBox()
+        {
+            frmMain MainForm = (frmMain)this.Owner;
+
+            if (MainForm.CurrentTabIndex == Constants.TabIndexes.ChatBomb)
+                return MainForm.txtSteamID64CB;
+            else if (MainForm.CurrentTabIndex == Constants.TabIndexes.InviteSpam)
+                return MainForm.txtSteamID64IS;
+
+            return null;
+        }
+        #endregion
     }
 }

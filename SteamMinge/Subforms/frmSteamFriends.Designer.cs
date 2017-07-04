@@ -1,6 +1,6 @@
 ﻿namespace SteamMinge
 {
-    partial class frmFriends
+    partial class frmSteamFriends
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFriends));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSteamFriends));
             this.gridFriends = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.picAvatar = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSteamID64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridFriends)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,19 +58,6 @@
             this.gridFriends.TabIndex = 0;
             this.gridFriends.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridFriends_CellDoubleClick);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.DarkCyan;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Double click a friend to populate their SteamID 64";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // picAvatar
             // 
             this.picAvatar.HeaderText = "Avatar";
@@ -94,7 +81,20 @@
             this.txtSteamID64.ReadOnly = true;
             this.txtSteamID64.Visible = false;
             // 
-            // frmFriends
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.DarkCyan;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 46);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Double click a friend to populate their SteamID 64";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // frmSteamFriends
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,10 +103,10 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmFriends";
+            this.Name = "frmSteamFriends";
             this.Text = "Friends List";
-            this.Load += new System.EventHandler(this.frmFriends_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmFriends_Close);
+            this.Load += new System.EventHandler(this.frmFriends_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridFriends)).EndInit();
             this.ResumeLayout(false);
 

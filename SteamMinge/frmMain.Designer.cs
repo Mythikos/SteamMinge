@@ -29,53 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.txtLineBox = new System.Windows.Forms.TextBox();
             this.tmrInit = new System.Windows.Forms.Timer(this.components);
-            this.txtMessages = new System.Windows.Forms.TextBox();
-            this.txtSteamID64 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbThreadCount = new System.Windows.Forms.ComboBox();
-            this.btnFriends = new System.Windows.Forms.Button();
-            this.lblMessageCount = new System.Windows.Forms.Label();
-            this.tmrLoop = new System.Windows.Forms.Timer(this.components);
+            this.lblStatus = new System.Windows.Forms.Label();
             this.picAvatar = new System.Windows.Forms.PictureBox();
-            this.txtInterval = new System.Windows.Forms.TextBox();
+            this.tabMingeTools = new System.Windows.Forms.TabControl();
+            this.pageChatBomb = new System.Windows.Forms.TabPage();
+            this.lblMingeCounterCB = new System.Windows.Forms.Label();
+            this.cmbThreadCountCB = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSteamID64CB = new System.Windows.Forms.TextBox();
+            this.txtMessagesCB = new System.Windows.Forms.TextBox();
+            this.btnStopCB = new System.Windows.Forms.Button();
+            this.btnStartCB = new System.Windows.Forms.Button();
+            this.txtIntervalCB = new System.Windows.Forms.TextBox();
+            this.pageInviteSpam = new System.Windows.Forms.TabPage();
+            this.lblMingeCounterIS = new System.Windows.Forms.Label();
+            this.cmbThreadCountIS = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtIntervalIS = new System.Windows.Forms.TextBox();
+            this.txtSteamID64IS = new System.Windows.Forms.TextBox();
+            this.btnStopIS = new System.Windows.Forms.Button();
+            this.btnStartIS = new System.Windows.Forms.Button();
+            this.tmrLoop = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.friendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlTitle = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
+            this.tabMingeTools.SuspendLayout();
+            this.pageChatBomb.SuspendLayout();
+            this.pageInviteSpam.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblStatus.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(64, 1);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(222, 45);
-            this.lblStatus.TabIndex = 0;
-            this.lblStatus.Text = "Steam Not Detected";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtLineBox
-            // 
-            this.txtLineBox.BackColor = System.Drawing.Color.DarkCyan;
-            this.txtLineBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLineBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtLineBox.Enabled = false;
-            this.txtLineBox.ForeColor = System.Drawing.Color.Black;
-            this.txtLineBox.Location = new System.Drawing.Point(0, 0);
-            this.txtLineBox.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.txtLineBox.Multiline = true;
-            this.txtLineBox.Name = "txtLineBox";
-            this.txtLineBox.Size = new System.Drawing.Size(296, 46);
-            this.txtLineBox.TabIndex = 1;
             // 
             // tmrInit
             // 
@@ -83,197 +73,382 @@
             this.tmrInit.Interval = 1000;
             this.tmrInit.Tick += new System.EventHandler(this.tmrInit_Tick);
             // 
-            // txtMessages
+            // lblStatus
             // 
-            this.txtMessages.Location = new System.Drawing.Point(12, 182);
-            this.txtMessages.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.txtMessages.Multiline = true;
-            this.txtMessages.Name = "txtMessages";
-            this.txtMessages.Size = new System.Drawing.Size(274, 107);
-            this.txtMessages.TabIndex = 2;
-            this.txtMessages.WordWrap = false;
+            this.lblStatus.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStatus.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(64, 0);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(232, 64);
+            this.lblStatus.TabIndex = 15;
+            this.lblStatus.Text = "Steam Not Detected";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtSteamID64
+            // picAvatar
             // 
-            this.txtSteamID64.Location = new System.Drawing.Point(12, 72);
-            this.txtSteamID64.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.txtSteamID64.Name = "txtSteamID64";
-            this.txtSteamID64.Size = new System.Drawing.Size(184, 23);
-            this.txtSteamID64.TabIndex = 3;
+            this.picAvatar.BackColor = System.Drawing.Color.DarkCyan;
+            this.picAvatar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picAvatar.Location = new System.Drawing.Point(0, 0);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Padding = new System.Windows.Forms.Padding(5);
+            this.picAvatar.Size = new System.Drawing.Size(64, 64);
+            this.picAvatar.TabIndex = 17;
+            this.picAvatar.TabStop = false;
             // 
-            // label1
+            // tabMingeTools
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 105);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Interval (MS):";
+            this.tabMingeTools.Controls.Add(this.pageChatBomb);
+            this.tabMingeTools.Controls.Add(this.pageInviteSpam);
+            this.tabMingeTools.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabMingeTools.Location = new System.Drawing.Point(0, 88);
+            this.tabMingeTools.Name = "tabMingeTools";
+            this.tabMingeTools.SelectedIndex = 0;
+            this.tabMingeTools.Size = new System.Drawing.Size(296, 327);
+            this.tabMingeTools.TabIndex = 23;
+            this.tabMingeTools.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.TabMingeTools_Selecting);
             // 
-            // label2
+            // pageChatBomb
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 162);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(263, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Messages (Different messages on new line):";
+            this.pageChatBomb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pageChatBomb.Controls.Add(this.lblMingeCounterCB);
+            this.pageChatBomb.Controls.Add(this.cmbThreadCountCB);
+            this.pageChatBomb.Controls.Add(this.label4);
+            this.pageChatBomb.Controls.Add(this.label3);
+            this.pageChatBomb.Controls.Add(this.label2);
+            this.pageChatBomb.Controls.Add(this.label1);
+            this.pageChatBomb.Controls.Add(this.txtSteamID64CB);
+            this.pageChatBomb.Controls.Add(this.txtMessagesCB);
+            this.pageChatBomb.Controls.Add(this.btnStopCB);
+            this.pageChatBomb.Controls.Add(this.btnStartCB);
+            this.pageChatBomb.Controls.Add(this.txtIntervalCB);
+            this.pageChatBomb.Location = new System.Drawing.Point(4, 22);
+            this.pageChatBomb.Name = "pageChatBomb";
+            this.pageChatBomb.Padding = new System.Windows.Forms.Padding(3);
+            this.pageChatBomb.Size = new System.Drawing.Size(288, 301);
+            this.pageChatBomb.TabIndex = 0;
+            this.pageChatBomb.Text = "Chat Bomb";
+            this.pageChatBomb.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // lblMingeCounterCB
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 51);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Victim (SteamID 64):";
+            this.lblMingeCounterCB.Location = new System.Drawing.Point(8, 247);
+            this.lblMingeCounterCB.Name = "lblMingeCounterCB";
+            this.lblMingeCounterCB.Size = new System.Drawing.Size(274, 16);
+            this.lblMingeCounterCB.TabIndex = 25;
+            this.lblMingeCounterCB.Text = "Total Messages Sent: 0";
+            this.lblMingeCounterCB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnStart
+            // cmbThreadCountCB
             // 
-            this.btnStart.Location = new System.Drawing.Point(14, 316);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(272, 27);
-            this.btnStart.TabIndex = 8;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(11, 316);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(275, 27);
-            this.btnStop.TabIndex = 9;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Visible = false;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            this.cmbThreadCountCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThreadCountCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbThreadCountCB.FormattingEnabled = true;
+            this.cmbThreadCountCB.Items.AddRange(new object[] {
+            "1",
+            "4",
+            "12"});
+            this.cmbThreadCountCB.Location = new System.Drawing.Point(7, 76);
+            this.cmbThreadCountCB.Name = "cmbThreadCountCB";
+            this.cmbThreadCountCB.Size = new System.Drawing.Size(121, 21);
+            this.cmbThreadCountCB.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 105);
+            this.label4.Location = new System.Drawing.Point(7, 57);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 16);
-            this.label4.TabIndex = 10;
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 22;
             this.label4.Text = "Threads:";
             // 
-            // cmbThreadCount
+            // label3
             // 
-            this.cmbThreadCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbThreadCount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbThreadCount.FormattingEnabled = true;
-            this.cmbThreadCount.Items.AddRange(new object[] {
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 3);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Victim (SteamID 64):";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 114);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Messages (Different messages on new line):";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(158, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Interval (MS):";
+            // 
+            // txtSteamID64CB
+            // 
+            this.txtSteamID64CB.Location = new System.Drawing.Point(8, 24);
+            this.txtSteamID64CB.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.txtSteamID64CB.Name = "txtSteamID64CB";
+            this.txtSteamID64CB.Size = new System.Drawing.Size(274, 20);
+            this.txtSteamID64CB.TabIndex = 1;
+            // 
+            // txtMessagesCB
+            // 
+            this.txtMessagesCB.Location = new System.Drawing.Point(8, 134);
+            this.txtMessagesCB.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.txtMessagesCB.Multiline = true;
+            this.txtMessagesCB.Name = "txtMessagesCB";
+            this.txtMessagesCB.Size = new System.Drawing.Size(274, 107);
+            this.txtMessagesCB.TabIndex = 4;
+            this.txtMessagesCB.WordWrap = false;
+            // 
+            // btnStopCB
+            // 
+            this.btnStopCB.Location = new System.Drawing.Point(7, 268);
+            this.btnStopCB.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.btnStopCB.Name = "btnStopCB";
+            this.btnStopCB.Size = new System.Drawing.Size(275, 27);
+            this.btnStopCB.TabIndex = 6;
+            this.btnStopCB.Text = "Stop";
+            this.btnStopCB.UseVisualStyleBackColor = true;
+            this.btnStopCB.Visible = false;
+            this.btnStopCB.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnStartCB
+            // 
+            this.btnStartCB.Location = new System.Drawing.Point(10, 268);
+            this.btnStartCB.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.btnStartCB.Name = "btnStartCB";
+            this.btnStartCB.Size = new System.Drawing.Size(272, 27);
+            this.btnStartCB.TabIndex = 5;
+            this.btnStartCB.Text = "Start";
+            this.btnStartCB.UseVisualStyleBackColor = true;
+            this.btnStartCB.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // txtIntervalCB
+            // 
+            this.txtIntervalCB.Location = new System.Drawing.Point(161, 76);
+            this.txtIntervalCB.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.txtIntervalCB.Name = "txtIntervalCB";
+            this.txtIntervalCB.Size = new System.Drawing.Size(121, 20);
+            this.txtIntervalCB.TabIndex = 3;
+            this.txtIntervalCB.Text = "80";
+            // 
+            // pageInviteSpam
+            // 
+            this.pageInviteSpam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pageInviteSpam.Controls.Add(this.lblMingeCounterIS);
+            this.pageInviteSpam.Controls.Add(this.cmbThreadCountIS);
+            this.pageInviteSpam.Controls.Add(this.label6);
+            this.pageInviteSpam.Controls.Add(this.label7);
+            this.pageInviteSpam.Controls.Add(this.label8);
+            this.pageInviteSpam.Controls.Add(this.txtIntervalIS);
+            this.pageInviteSpam.Controls.Add(this.txtSteamID64IS);
+            this.pageInviteSpam.Controls.Add(this.btnStopIS);
+            this.pageInviteSpam.Controls.Add(this.btnStartIS);
+            this.pageInviteSpam.Location = new System.Drawing.Point(4, 22);
+            this.pageInviteSpam.Name = "pageInviteSpam";
+            this.pageInviteSpam.Padding = new System.Windows.Forms.Padding(3);
+            this.pageInviteSpam.Size = new System.Drawing.Size(288, 301);
+            this.pageInviteSpam.TabIndex = 1;
+            this.pageInviteSpam.Text = "Invite Spam";
+            this.pageInviteSpam.UseVisualStyleBackColor = true;
+            // 
+            // lblMingeCounterIS
+            // 
+            this.lblMingeCounterIS.Location = new System.Drawing.Point(7, 104);
+            this.lblMingeCounterIS.Name = "lblMingeCounterIS";
+            this.lblMingeCounterIS.Size = new System.Drawing.Size(274, 16);
+            this.lblMingeCounterIS.TabIndex = 34;
+            this.lblMingeCounterIS.Text = "Total Invites Sent: 0";
+            this.lblMingeCounterIS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbThreadCountIS
+            // 
+            this.cmbThreadCountIS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThreadCountIS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbThreadCountIS.FormattingEnabled = true;
+            this.cmbThreadCountIS.Items.AddRange(new object[] {
             "1",
             "4",
             "12"});
-            this.cmbThreadCount.Location = new System.Drawing.Point(11, 124);
-            this.cmbThreadCount.Name = "cmbThreadCount";
-            this.cmbThreadCount.Size = new System.Drawing.Size(121, 24);
-            this.cmbThreadCount.TabIndex = 11;
-            this.cmbThreadCount.SelectedIndexChanged += new System.EventHandler(this.cmbThreadCount_SelectedIndexChanged);
+            this.cmbThreadCountIS.Location = new System.Drawing.Point(7, 76);
+            this.cmbThreadCountIS.Name = "cmbThreadCountIS";
+            this.cmbThreadCountIS.Size = new System.Drawing.Size(121, 21);
+            this.cmbThreadCountIS.TabIndex = 2;
             // 
-            // btnFriends
+            // label6
             // 
-            this.btnFriends.Location = new System.Drawing.Point(211, 72);
-            this.btnFriends.Name = "btnFriends";
-            this.btnFriends.Size = new System.Drawing.Size(75, 23);
-            this.btnFriends.TabIndex = 12;
-            this.btnFriends.Text = "Friends";
-            this.btnFriends.UseVisualStyleBackColor = true;
-            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 57);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Threads:";
             // 
-            // lblMessageCount
+            // label7
             // 
-            this.lblMessageCount.Location = new System.Drawing.Point(12, 295);
-            this.lblMessageCount.Name = "lblMessageCount";
-            this.lblMessageCount.Size = new System.Drawing.Size(274, 16);
-            this.lblMessageCount.TabIndex = 13;
-            this.lblMessageCount.Text = "Total Messages Sent: 0";
-            this.lblMessageCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 3);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 13);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Victim (SteamID 64):";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(158, 57);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Interval (MS):";
+            // 
+            // txtIntervalIS
+            // 
+            this.txtIntervalIS.Location = new System.Drawing.Point(161, 76);
+            this.txtIntervalIS.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.txtIntervalIS.Name = "txtIntervalIS";
+            this.txtIntervalIS.Size = new System.Drawing.Size(121, 20);
+            this.txtIntervalIS.TabIndex = 3;
+            this.txtIntervalIS.Text = "80";
+            // 
+            // txtSteamID64IS
+            // 
+            this.txtSteamID64IS.Location = new System.Drawing.Point(8, 24);
+            this.txtSteamID64IS.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.txtSteamID64IS.Name = "txtSteamID64IS";
+            this.txtSteamID64IS.Size = new System.Drawing.Size(274, 20);
+            this.txtSteamID64IS.TabIndex = 1;
+            // 
+            // btnStopIS
+            // 
+            this.btnStopIS.Location = new System.Drawing.Point(7, 125);
+            this.btnStopIS.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.btnStopIS.Name = "btnStopIS";
+            this.btnStopIS.Size = new System.Drawing.Size(275, 27);
+            this.btnStopIS.TabIndex = 5;
+            this.btnStopIS.Text = "Stop";
+            this.btnStopIS.UseVisualStyleBackColor = true;
+            this.btnStopIS.Visible = false;
+            this.btnStopIS.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnStartIS
+            // 
+            this.btnStartIS.Location = new System.Drawing.Point(7, 125);
+            this.btnStartIS.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.btnStartIS.Name = "btnStartIS";
+            this.btnStartIS.Size = new System.Drawing.Size(272, 27);
+            this.btnStartIS.TabIndex = 4;
+            this.btnStartIS.Text = "Start";
+            this.btnStartIS.UseVisualStyleBackColor = true;
+            this.btnStartIS.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // tmrLoop
             // 
             this.tmrLoop.Enabled = true;
             this.tmrLoop.Tick += new System.EventHandler(this.tmrLoop_Tick);
             // 
-            // picAvatar
+            // menuStrip1
             // 
-            this.picAvatar.BackColor = System.Drawing.Color.DarkCyan;
-            this.picAvatar.Location = new System.Drawing.Point(20, 7);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(32, 32);
-            this.picAvatar.TabIndex = 14;
-            this.picAvatar.TabStop = false;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.friendsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(296, 24);
+            this.menuStrip1.TabIndex = 24;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // txtInterval
+            // friendsToolStripMenuItem
             // 
-            this.txtInterval.Location = new System.Drawing.Point(165, 124);
-            this.txtInterval.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.txtInterval.Name = "txtInterval";
-            this.txtInterval.Size = new System.Drawing.Size(121, 23);
-            this.txtInterval.TabIndex = 4;
+            this.friendsToolStripMenuItem.Name = "friendsToolStripMenuItem";
+            this.friendsToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.friendsToolStripMenuItem.Text = "Friends";
+            this.friendsToolStripMenuItem.Click += new System.EventHandler(this.friendsToolStripMenuItem_Click);
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.DarkCyan;
+            this.pnlTitle.Controls.Add(this.lblStatus);
+            this.pnlTitle.Controls.Add(this.picAvatar);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(0, 24);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(296, 64);
+            this.pnlTitle.TabIndex = 25;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 352);
-            this.Controls.Add(this.picAvatar);
-            this.Controls.Add(this.lblMessageCount);
-            this.Controls.Add(this.btnFriends);
-            this.Controls.Add(this.cmbThreadCount);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtInterval);
-            this.Controls.Add(this.txtSteamID64);
-            this.Controls.Add(this.txtMessages);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.btnStop);
-            this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.txtLineBox);
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(296, 415);
+            this.Controls.Add(this.tabMingeTools);
+            this.Controls.Add(this.pnlTitle);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "Chat Bomb";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_Close);
+            this.Text = "Steam Minge";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_Closed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
+            this.tabMingeTools.ResumeLayout(false);
+            this.pageChatBomb.ResumeLayout(false);
+            this.pageChatBomb.PerformLayout();
+            this.pageInviteSpam.ResumeLayout(false);
+            this.pageInviteSpam.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
         #endregion
 
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.TextBox txtLineBox;
         private System.Windows.Forms.Timer tmrInit;
-        private System.Windows.Forms.TextBox txtMessages;
-        private System.Windows.Forms.TextBox txtSteamID64;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbThreadCount;
-        private System.Windows.Forms.Button btnFriends;
-        private System.Windows.Forms.Label lblMessageCount;
-        private System.Windows.Forms.Timer tmrLoop;
         private System.Windows.Forms.PictureBox picAvatar;
-        private System.Windows.Forms.TextBox txtInterval;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.TabPage pageChatBomb;
+        private System.Windows.Forms.TabPage pageInviteSpam;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer tmrLoop;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem friendsToolStripMenuItem;
+        public System.Windows.Forms.TextBox txtSteamID64CB;
+        public System.Windows.Forms.TextBox txtSteamID64IS;
+        public System.Windows.Forms.TabControl tabMingeTools;
+        public System.Windows.Forms.Label lblMingeCounterCB;
+        public System.Windows.Forms.ComboBox cmbThreadCountCB;
+        public System.Windows.Forms.TextBox txtMessagesCB;
+        public System.Windows.Forms.Button btnStopCB;
+        public System.Windows.Forms.Button btnStartCB;
+        public System.Windows.Forms.TextBox txtIntervalCB;
+        public System.Windows.Forms.Label lblMingeCounterIS;
+        public System.Windows.Forms.ComboBox cmbThreadCountIS;
+        public System.Windows.Forms.TextBox txtIntervalIS;
+        public System.Windows.Forms.Button btnStopIS;
+        public System.Windows.Forms.Button btnStartIS;
+        private System.Windows.Forms.Panel pnlTitle;
     }
 }
-

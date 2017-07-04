@@ -22,7 +22,7 @@ namespace SteamMinge.Classes
                     file.Attributes = FileAttributes.Normal;
                     File.Delete(file.FullName);
                 }
-                catch (Exception ex) { }
+                catch { }
             }
         }
 
@@ -41,14 +41,21 @@ namespace SteamMinge.Classes
             // Try to get the avatar
             try
             {
-                int AvatarBytes = SteamFriends.GetSmallFriendAvatar(sID);
+                int AvatarBytes = 0;
+
+                if (width == 32)
+                    AvatarBytes = SteamFriends.GetSmallFriendAvatar(sID);
+                else if (width == 64)
+                    AvatarBytes = SteamFriends.GetMediumFriendAvatar(sID);
+
+
                 byte[] ImgArray = new byte[width * height * 4];
                 bool Success = SteamUtils.GetImageRGBA(AvatarBytes, ImgArray, (int)(width * height * 4));
 
                 if (Success)
                     SteamMinge.Classes.ImageExtension.WriteBitmapFile(FullPath, width, height, ImgArray);
             }
-            catch(Exception ex) { }
+            catch { }
 
             // Read the image in, avoid using Image.FromFile to avoid process lock on the image
             Image Avatar = null;

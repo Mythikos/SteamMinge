@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Steamworks.NET, Version=7.0.0.0, Culture=neutral, processorArchitecture=x86">
@@ -55,34 +56,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\ControlHelper.cs" />
     <Compile Include="Classes\ImageExtension.cs" />
-    <Compile Include="frmFriends.cs">
+    <Compile Include="Subforms\frmSteamFriends.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFriends.Designer.cs">
-      <DependentUpon>frmFriends.cs</DependentUpon>
+    <Compile Include="Subforms\frmSteamFriends.Designer.cs">
+      <DependentUpon>frmSteamFriends.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Program.cs" />
-    <Compile Include="frmSpam.cs">
+    <Compile Include="Subforms\frmSpam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSpam.Designer.cs">
+    <Compile Include="Subforms\frmSpam.Designer.cs">
       <DependentUpon>frmSpam.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmFriends.resx">
-      <DependentUpon>frmFriends.cs</DependentUpon>
+    <EmbeddedResource Include="Subforms\frmSteamFriends.resx">
+      <DependentUpon>frmSteamFriends.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSpam.resx">
+    <EmbeddedResource Include="Subforms\frmSpam.resx">
       <DependentUpon>frmSpam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -109,12 +112,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\spam.png" />
     <Content Include="favicon.ico" />
+    <None Include="Resources\bomb.png" />
     <None Include="Resources\brian.jpg" />
     <None Include="Resources\derp_girl.jpg" />
     <None Include="Resources\hank_hill.jpg" />
     <None Include="Resources\tweece.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

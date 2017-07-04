@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SteamMinge.Classes;
 
 namespace SteamMinge
 {
@@ -40,19 +41,7 @@ namespace SteamMinge
         private void tmrResize_Tick(object sender, EventArgs e)
         {
             // Make it huge o.O?
-            Image fakeImage = new Bitmap(1, 1);
-            Graphics graphics = Graphics.FromImage(fakeImage);
-
-            SizeF extent = graphics.MeasureString(this.lblMessage.Text, this.lblMessage.Font);
-
-            float hRatio = this.lblMessage.Height / extent.Height;
-            float wRatio = this.lblMessage.Width / extent.Width;
-            float ratio = (hRatio < wRatio) ? hRatio : wRatio;
-
-            float newSize = this.lblMessage.Font.Size * ratio;
-
-            this.lblMessage.Font = new Font(this.lblMessage.Font.FontFamily, newSize, this.lblMessage.Font.Style);
-
+            ControlHelper.SizeLabelFont(this.lblMessage);
             this.tmrResize.Enabled = false;
         }
 

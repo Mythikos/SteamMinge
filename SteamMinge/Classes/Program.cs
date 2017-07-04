@@ -8,7 +8,7 @@ namespace SteamMinge
 {
     static class Program
     {
-        public static string AppName = "SteamMinge";
+        public static string AppName = "Steam Minge";
         public static string AppVersion = "0.0.1";
 
         /// <summary>

@@ -1,0 +1,12 @@
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\bin\Release\SteamMinge.exe.config
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\bin\Release\SteamMinge.exe
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\bin\Release\SteamMinge.pdb
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\bin\Release\Steamworks.NET.dll
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.csprojResolveAssemblyReference.cache
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.frmFriends.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.frmMain.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.frmSpam.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.Properties.Resources.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.csproj.GenerateResource.Cache
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.exe
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Release\SteamMinge.pdb

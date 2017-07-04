@@ -1,0 +1,4 @@
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\bin\Debug\ChatBomb.exe.config
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Debug\ChatBomb.exe
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\obj\Debug\ChatBomb.pdb
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\SteamMinge\bin\Debug\SteamMinge.exe.config

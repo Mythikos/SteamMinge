@@ -1,0 +1,12 @@
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\bin\Release\ChatBomb.exe.config
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\bin\Release\ChatBomb.exe
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\bin\Release\ChatBomb.pdb
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\bin\Release\Steamworks.NET.dll
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.frmFriends.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.frmMain.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.frmSpam.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.Properties.Resources.resources
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.csproj.GenerateResource.Cache
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.exe
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.pdb
+D:\Users\pntbl\Documents\Visual Studio 2015\Projects\ChatBomb\ChatBomb\obj\Release\ChatBomb.csprojResolveAssemblyReference.cache

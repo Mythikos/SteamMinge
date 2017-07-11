@@ -103,6 +103,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSteamFriends";
             this.Text = "Friends List";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmFriends_Close);

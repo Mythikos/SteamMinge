@@ -401,6 +401,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimizeBox = false;
             this.Name = "frmMain";
             this.Text = "Steam Minge";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_Closed);

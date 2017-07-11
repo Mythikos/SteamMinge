@@ -61,6 +61,10 @@ namespace SteamMinge
 
             // Clear the message directories
             ImageExtension.DeleteFilesInDirectory(Directory.GetCurrentDirectory() + @"\images", "bmp");
+
+            // Close the bomb threads before closing, lol
+            foreach (Thread thread in _Threads)
+                KillBombThread(thread);
         }
 
         private void btnStop_Click(object sender, EventArgs e)

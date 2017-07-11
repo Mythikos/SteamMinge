@@ -5,14 +5,15 @@ using Steamworks;
 using SteamMinge.Classes;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 
 namespace SteamMinge
 {
     public partial class frmSteamFriends : Form
     {
-        private SortedDictionary<string, CSteamID> _FriendsList;
+        private Dictionary<CSteamID, string> _FriendsList;
 
-        public frmSteamFriends(SortedDictionary<string, CSteamID> FriendsList)
+        public frmSteamFriends(Dictionary<CSteamID, string> FriendsList)
         {
             // Assign globals
             _FriendsList = FriendsList;
@@ -25,10 +26,10 @@ namespace SteamMinge
         private void frmFriends_Load(object sender, EventArgs e)
         {
             // Loop through all of the friends and add them to the data grid
-            foreach (KeyValuePair<string, CSteamID> Friend in _FriendsList)
+            foreach (KeyValuePair<CSteamID, string> Friend in _FriendsList.OrderBy(kv => kv.Value))
             {
-                Image img = ImageExtension.GetSteamAvatar(Friend.Value, @"friends\" + Friend.Value.ToString(), 32, 32);
-                this.gridFriends.Rows.Add(new object[] { img, Friend.Key, Friend.Value });
+                Image img = ImageExtension.GetSteamAvatar(Friend.Key, @"friends\" + Friend.Key.ToString(), 32, 32);
+                this.gridFriends.Rows.Add(new object[] { img, Friend.Value, Friend.Key});
             }
         }
 

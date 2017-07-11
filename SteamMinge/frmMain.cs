@@ -253,10 +253,14 @@ namespace SteamMinge
         #region SubForm Methods
         public void CloseFriendForm()
         {
-            // Close all forms that are currently open that isnt our main form
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-                if (Application.OpenForms[i].Name == "frmSteamFriends")
-                    Application.OpenForms[i].Close();
+            try
+            {
+                // Close all forms that are currently open that isnt our main form
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                    if (Application.OpenForms[i].Name == "frmSteamFriends")
+                        Application.OpenForms[i].Close();
+            }
+            catch { }
         }
 
         private void friendsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -265,14 +269,17 @@ namespace SteamMinge
             CloseFriendForm();
 
             // Create local variables
-            SortedDictionary<string, CSteamID> FriendList = new SortedDictionary<string, CSteamID>();
+            Dictionary<CSteamID, string> FriendList = new Dictionary<CSteamID, string>();
             int iCount = SteamFriends.GetFriendCount(EFriendFlags.k_EFriendFlagImmediate);
 
             // Get the friend list
             for (int i = 0; i < iCount; ++i)
             {
                 CSteamID sID = SteamFriends.GetFriendByIndex(i, EFriendFlags.k_EFriendFlagImmediate);
-                FriendList.Add(SteamFriends.GetFriendPersonaName(sID).ToString(), sID);
+
+                // Make sure the id isnt already in our list
+                if (!FriendList.ContainsKey(sID))
+                    FriendList.Add(sID, SteamFriends.GetFriendPersonaName(sID).ToString());
             }
 
             // Open friend list

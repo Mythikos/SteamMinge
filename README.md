@@ -2,17 +2,17 @@
 The Steam Minge is a trolling application that utilizes the Steamworks.NET framework to mass send messages, send invites, and other annoying things!
 
 
-# Usage
+## Usage
 1. Download the project and open it in VS 2015/2017.
 2. Select release mode and build the project. The executables will be dumped in the SteamMinge/bin/Release folder. 
 3. Run and enjoy.
 
 
-# TODO
+## TODO
 Currently don't have any todos for this project. If there is something you'd like added, feel free to submit a request.
 
 
-# Steamworks.NET License
+## Steamworks.NET License
 The MIT License (MIT)
 
 Copyright (c) 2013-2017 Riley Labrecque

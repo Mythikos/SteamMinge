@@ -1,6 +1,8 @@
 # Steam Minge
 The Steam Minge is a trolling application that utilizes the Steamworks.NET framework to mass send messages, send invites, and other annoying things!
 
+## Note
+The new steam chat system has an anti-spam system built into it. That makes the chat spamming portion of the minge pretty useless.
 
 ## Usage
 1. Download the project and open it in VS 2015/2017.
